@@ -1,0 +1,73 @@
+# 编译x64固件:
+CONFIG_TARGET_x86=y
+CONFIG_TARGET_x86_64=y
+CONFIG_TARGET_x86_64_Generic=y
+
+# 设置固件大小:
+CONFIG_TARGET_KERNEL_PARTSIZE=32
+CONFIG_TARGET_ROOTFS_PARTSIZE=450
+
+# 固件压缩:
+CONFIG_TARGET_IMAGES_GZIP=y
+CONFIG_TARGET_IMAGES_PAD=y
+
+# 编译常规以及UEFI固件:
+CONFIG_GRUB_IMAGES=n
+CONFIG_EFI_IMAGES=y
+CONFIG_TARGET_ROOTFS_EXT4FS=y
+
+# 编译PVE固件:
+CONFIG_QCOW2_IMAGES=n
+
+# 编译VMware镜像
+CONFIG_VMDK_IMAGES=n
+
+
+# Extra Packages
+CONFIG_PACKAGE_autocore-x86=y
+
+### USB Suppport
+CONFIG_PACKAGE_kmod-usb-acm=y
+CONFIG_PACKAGE_kmod-usb-ehci=y
+CONFIG_PACKAGE_kmod-usb-wdm=y
+
+### SD Card Support
+CONFIG_PACKAGE_kmod-sdhci=y
+
+#USB net driver
+CONFIG_PACKAGE_kmod-usb-net-asix=y
+CONFIG_PACKAGE_kmod-usb-net-asix-ax88179=y
+CONFIG_PACKAGE_kmod-usb-net-rtl8150=y
+CONFIG_PACKAGE_kmod-usb-net-rtl8152=y
+CONFIG_PACKAGE_kmod-usb-net-rtl8152-vendor=n
+CONFIG_PACKAGE_kmod-usb-net-rndis=y
+CONFIG_PACKAGE_kmod-usb-net-ipheth=y
+CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
+CONFIG_PACKAGE_kmod-r8101=y
+CONFIG_PACKAGE_kmod-r8125=y
+CONFIG_PACKAGE_kmod-r8168=y
+CONFIG_PACKAGE_kmod-r8169=n
+
+### Ethernet Support
+CONFIG_PACKAGE_kmod-igc=y
+
+# QEMU
+CONFIG_PACKAGE_qemu-ga=n
+CONFIG_PACKAGE_qemu-img=n
+
+# System Utilities
+CONFIG_PACKAGE_acl=y
+CONFIG_PACKAGE_btrfs-progs=y
+CONFIG_PACKAGE_e2fsprogs=y
+CONFIG_PACKAGE_htop=y
+CONFIG_PACKAGE_mkf2fs=y
+CONFIG_PACKAGE_nfs-utils-libs=y
+CONFIG_PACKAGE_pciutils=y
+CONFIG_PACKAGE_squashfs-tools-mksquashfs=y
+CONFIG_PACKAGE_squashfs-tools-unsquashfs=y
+CONFIG_PACKAGE_swap-utils=y
+CONFIG_PACKAGE_sysfsutils=y
+CONFIG_SQUASHFS_TOOLS_LZ4_SUPPORT=y
+CONFIG_SQUASHFS_TOOLS_LZO_SUPPORT=y
+CONFIG_SQUASHFS_TOOLS_XZ_SUPPORT=y
+
