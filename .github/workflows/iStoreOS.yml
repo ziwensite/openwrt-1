@@ -28,16 +28,7 @@ on:
       
   repository_dispatch:
   workflow_dispatch:
-    inputs:
-      REPO_BRANCH:
-        description: 'iStoreOS源码-请选择分支'
-        required: true
-        default: 'main'
-        type: choice
-        options:
-          - 'main'
-          - 'istoreos-21.02'
-          - 'istoreos-21.02.2'
+    inputs:    
       ssh:
         description: 'SSH connection to Actions'
         required: false
